@@ -1,0 +1,293 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+</head>
+  <body class="special-bg">
+    <div class="sticky-top">
+        <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+            <div class="text-center p-4">
+              <h2 class="text-body-emphasis h4 color-white" >campus GameSoft</h2>
+              <span class="text-body-secondary color-white">los mejores juegos a los mejores precios.</span>
+            </div>
+          </div>
+          <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </nav>
+        </div>
+
+    <main class="mt-5">
+        <div class="d-flex align-items-start">
+            <div class="nav flex-column nav-pills sticky-top me-3 h-aside" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <button class="nav-link active  mb-5 " id="v-pills-register-tab" data-bs-toggle="pill" data-bs-target="#v-pills-register" type="button" role="tab" aria-controls="v-pills-register" aria-selected="true">registrar</button>
+              <button class="nav-link mb-5" id="v-pills-gestion-tab" data-bs-toggle="pill" data-bs-target="#v-pills-gestion" type="button" role="tab" aria-controls="v-pills-gestion" aria-selected="false">videoJuegos</button>
+              <button class="nav-link mb-5" id="v-pills-compra-tab" data-bs-toggle="pill" data-bs-target="#v-pills-compra" type="button" role="tab" aria-controls="v-pills-compra" onclick="añadirOpciones()" aria-selected="false">comprar</button>
+              <button class="nav-link mb-5" id="v-pills-fidelidad-tab" data-bs-toggle="pill" data-bs-target="#v-pills-fidelidad" type="button" role="tab" aria-controls="v-pills-fidelidad" aria-selected="true">fidelidad</button>
+            
+            </div>
+            <!-- seccion gestion de usuarios -->
+            <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade show active h-pills w-pills bg-light" id="v-pills-register" role="tabpanel" aria-labelledby="v-pills-register-tab" tabindex="0">
+            <h1 class="rounded-top text-center bg-dark text-white fs-1 mb-0">Gestion de usuarios</h1>
+          
+              <form class="row g-3 text-center mt-5 px-5" id="form-register">
+                <div class="col-md-4">
+                  <label for="ipt-id-register" class="form-label">Identificación</label>
+                  <input type="text" class="form-control" id="ipt-id-register"  required>
+                </div>
+                <div class="col-md-4">
+                  <label for="ipt-nombres-register" class="form-label">Nombres</label>
+                  <input type="text" class="form-control" id="ipt-nombres-register"  required>
+                </div>
+                <div class="col-md-4">
+                  <label for="ipt-apellidos-register" class="form-label">Apellidos</label>
+                    <input type="text" class="form-control" id="ipt-apellidos-register" aria-describedby="inputGroupPrepend2" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="ipt-email-register" class="form-label">Email</label>
+                    <div class="input-group">
+                      <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                      <input type="text" class="form-control" id="ipt-email-register" aria-describedby="inputGroupPrepend2" required>
+                    </div>
+                  </div>
+                <div class="col-md-6">
+                    <label for="ipt-numero-register" class="form-label">Numero</label>
+                  <input type="text" class="form-control" id="ipt-numero-register" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="ipt-pais-register" class="form-label">Nacionalidad</label>
+                  <select class="form-select" id="ipt-pais-register" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option value="venezuela"> venezuela</option>
+                    <option value="colombia">colombia</option>
+                    <option value="argentina" >argentina</option>
+                    <option value="brasil">brasil</option>
+                    <option value="españa">españa</option>
+                    <option value="peru">peru</option>
+                  
+                    </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="ipt-nacimiento-register" class="form-label">Fecha de nacimiento</label>
+                          <input type="date" class="form-control" id="ipt-nacimiento-register" aria-describedby="inputGroupPrepend2" required>
+                      </div>
+                
+                  <button class="btn btn-primary mt-5" type="submit" id="btn-register">Registrar</button>
+              </form>
+               <!-- off canvas -->
+            <button class="btn btn-primary rounded-0" type="button" id="btn-canvas-register" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">ver registro</button>
+            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+              <div class="offcanvas-header">
+                <form class="d-flex w-100" role="search" id="form-search">
+                    <input class="form-control me-2" type="search" id="search-input" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit" id="form-btn-search">Search</button>
+                  </form>
+              
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <table class="table">
+                    <thead>
+                      <tr class="text-center">
+                        <th scope="col">id</th>
+                        <th scope="col">nombres</th>
+                        <th scope="col">apellidos</th>
+                        <th scope="col">telefono</th>
+                        <th scope="col">correo</th>
+                        <th scope="col">nacimiento</th>
+                        <th scope="col">Nacionalidad</th>
+                        <th scope="col">Funciones</th>
+
+                      </tr>
+                    </thead>
+                    <tbody id="table-body">
+                    <!-- aqui se añaden las filas -->
+                    </tbody>
+                  </table>
+              </div>
+            </div>
+
+            </div>  
+              
+              <div class="tab-pane fade w-pills h-pills w-pills bg-light" id="v-pills-gestion" role="tabpanel" aria-labelledby="v-pills-gestion-tab" tabindex="0">
+
+                <h1 class="rounded-top text-center bg-dark text-white fs-1 mb-0">VideoJuegos</h1>
+                  <div class="d-flex justify-content-center bg-dark">
+                    <!-- boton del modal-->
+                    <button type="button" class="btn btn-warning w-100 rounded-0 shadow-none"  data-bs-toggle="modal" data-bs-target=".modal">Añadir VideoJuego</button>
+                    <hr>    
+                  </div>
+                  <!-- modal para añadir VideoJuego -->
+                  <div class="modal" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="input-group-text rounded-0">URL</span>
+                            <input type="text" id="url-videoJuego" aria-label="First name" placeholder="Preferiblemente en JPG" class="form-control rounded-0" />
+                        </div>
+                        <div class="modal-body">
+                            <form id="form-videoJuego">
+                                <div class="mb-3">
+                                  <label for="ipt-id-videoJuego" class="form-label">ID</label>
+                                  <input type="number" class="form-control" id="ipt-id-videoJuego" aria-describedby="id">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="ipt-nombre-videoJuego" class="form-label">NOMBRE DEL VIDEOJUEGO</label>
+                                  <input type="text" class="form-control" id="ipt-nombre-videoJuego">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="ipt-tematica-videoJuego" class="form-label">TEMATICA</label>
+                                    <input type="text" class="form-control" id="ipt-tematica-videoJuego">
+                                  </div>
+
+                                <label for="ipt-valor-videoJuego" class="form-label">VALOR VIDEOJUEGO</label>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="ipt-valor-videoJuego">
+                                  </div>
+
+                                  <div class="mb-3">
+                                      <label for="ipt-fidelizacion-videoJuego" class="form-label">FIDELIZACIÓN</label>
+                                      <input type="text" class="form-control" id="ipt-fidelizacion-videoJuego">
+                                    </div>
+                                    
+
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" id="form-videoJuego-btn">agregar</button>
+                            </form>
+                        </div>         
+                       </div>
+                      </div>
+                    </div>
+                    <!--  -->
+
+                     <!-- card group -->
+                  <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-2 mt-5 px-2 justify-content-evenly" id="contenedor-cards">
+                    <!-- videojuego por defecto -->
+                    <div class="col  contenedor-card card-shadow">
+                      <div class="card h-100 ">
+                        <img src="https://i.blogs.es/c97ab3/trucos-san-andreas-1/1366_2000.jpg" class="card-img-top" height="250px" alt="imagen del videojuego"/>
+                        <div class="card-body bg-gray border-3 p-2">
+                          <h5 class="card-title text-center ">GTA San Andres</h5>
+                          
+                          <table class="table">
+                            <tbody class="text-center ">
+                              <tr class=" gradiente-blanco">
+                                <th scope="row" class="rounded-start gradiente-rojo"><i class=" fa-sharp fa-solid fa-hashtag fa-beat"></i></th>
+                                <td colspan="1" class="table-active rounded-end text-white gradiente-negro" id="contenedor-id" >1</td>
+                              </tr>
+                              <tr class=" gradiente-blanco">
+                                <th scope="row" class="rounded-start gradiente-rojo"><i class="fa-solid fa-gamepad fa-beat-fade fa-sm" style="color: #000000;"></i></th>
+                                <td colspan="1" class="table-active rounded-end text-white gradiente-negro">Rol Play</td>
+                              </tr>
+                              <tr class=" gradiente-blanco">
+                                <th scope="row" class="rounded-start gradiente-rojo"><i class=" fa-duotone fa-dollar-sign fa-beat" style="--fa-primary-color: #000000; --fa-primary-opacity: 1; --fa-secondary-color: #000000; --fa-secondary-opacity: 0.4;"></i> 
+                                </th>
+                                <td colspan="1" class="table-active rounded-end text-white gradiente-negro">70000</td>
+                              </tr>
+
+                              <tr class=" gradiente-blanco">
+                                <th scope="row" class="rounded-start gradiente-rojo"><i class=" fa-solid fa-crown fa-beat" style="color: #000000;"></i></th>
+                                <td colspan="1" class="table-active rounded-end text-white gradiente-negro">100</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <button class="btn btn-primary d-block" onclick="eliminarCard(this)" type="button">Eliminar</button>
+                        </div>  
+                      </div>
+                    </div>
+                  <!-- aquí se añaden las cards -->
+
+                  </div>
+
+              </div>
+              <div class="tab-pane fade w-pills bg-light" id="v-pills-compra" role="tabpanel" aria-labelledby="v-pills-compras-tab" tabindex="0">
+                <h1 class=" mt-5 rounded-3 text-center bg-dark text-white fs-1">compra y disfuta</h1>
+                
+                <!-- tabs tipo stepper -->
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="compras-tab" data-bs-toggle="tab" data-bs-target="#r-compra" type="button" role="tab" aria-controls="home" aria-selected="true" disabled>Registro de compra</button>
+                  </li>
+
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="resumen-tab"  onclick="resumen()" data-bs-toggle="tab" data-bs-target="#resumen" type="button" role="tab" aria-controls="resumen" aria-selected="false"  disabled>Resumen</button>
+                  </li>
+                </ul>
+                
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="r-compra" role="tabpanel" aria-labelledby="compras-tab">
+
+                    <form class="w-75 m-auto text-center" id="form-compras">
+                      <label for="select-nombre">Nombre del usuario:</label>
+                      <select class="form-select form-select-md mb-3" id="select-nombre-compras" aria-label=".form-select-lg example">
+                        <option selected>Usuarios</option>
+                      </select>
+                
+                      <label for="select-ruta">Nombre del VideoJuego:</label>
+                      <select class="form-select form-select-md mb-3" id="select-videoJuego-compras" aria-label=".form-select-lg example">
+                        <option selected>VideoJuegos</option>
+                      </select>
+                      <button type="submit" class="btn btn-primary" id="form-compras-btn" id="resumen" >Seleccionar</button>
+                    </form>
+                    <!-- ticket -->
+
+                    <div class="row g-1 m-auto mt-5 rounded-3 border-2 text-center" id="contenedor-ticket" style="width: 80%;">
+
+                    </div>
+
+                  </div>
+                
+                  <div class="tab-pane fade  h-pills w-pills bg-light" id="resumen"  role="tabpanel" aria-labelledby="contact-tab">
+                    <!-- aquí se añade la factura -->
+                    <div class="w-100" id="factura"> 
+                    </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="tab-pane fade h-pills w-pills bg-light" id="v-pills-fidelidad" role="tabpanel" aria-labelledby="v-pills-fidelidad-tab" tabindex="0">
+                    <table class="table ">
+                        <thead>
+                          <tr>
+                            <th scope="col">nombre</th>
+                            <th scope="col">apellido</th>
+                            <th scope="col">puntos</th>
+                          </tr>
+                        </thead>
+                        <tbody id="table-body-fidelizacion">
+                          <!-- aquí se añaden las filas -->
+                          </tbody>
+                      </table>
+
+                </div>
+
+
+
+
+        </div>
+          
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="codigo.js"></script>
+</body>
+</html>
