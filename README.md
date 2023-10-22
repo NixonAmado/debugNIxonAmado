@@ -23,4 +23,4 @@ Este proyecto es una tienda en línea de videojuegos que permite a los usuarios 
 ---
 
 **Nixon Amado**
-[LinkedIn]([https://www.linkedin.com/in/nixonamadodev/) 
+[LinkedIn](www.linkedin.com/in/nixonamadodev) 
