@@ -18,7 +18,7 @@ Este proyecto es una tienda en línea de videojuegos que permite a los usuarios 
 - [Bootstrap](https://getbootstrap.com/)
 - JavaScript
 - 
-##Uso
+## Uso
 1. abre este enlace a una Page de git: https://nixonamado.github.io/debugNIxonAmado/
 ---
 
